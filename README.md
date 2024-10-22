@@ -12,3 +12,6 @@
  <!-- docker-compose exec db psql --username=postgres --dbname=fast_api_email -->
 
 <!-- https://fastapi-tutorial.readthedocs.io/en/latest/ -->
+
+##
+        docker-compose up
