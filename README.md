@@ -12,6 +12,16 @@
  <!-- docker-compose exec db psql --username=postgres --dbname=fast_api_email -->
 
 <!-- https://fastapi-tutorial.readthedocs.io/en/latest/ -->
+<!-- https://www.educative.io/answers/how-to-use-postgresql-database-in-fastapi -->
+<!-- https://www.fastapitutorial.com/blog/schemas-in-fastapi-legacy/ -->
+<!-- pip install fastapi[all] —upgrade -->
+<!-- create child model in crud.py fast api -->
+<!-- sudo chmod a+rwx src/tests -->
+- Create two models Message(with Fk), User(parent). all in container. use debeaver (conn params from .env). Endpoints are not prepared yet.
 
 ##
         docker-compose up
+
+- Better:
+##
+                docker-compose up --build
