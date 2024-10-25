@@ -9,7 +9,7 @@ class MessageSchema(BaseModel):
     time_created: datetime
     time_updated: datetime
 
-    class Config:
+    class ConfigDict:
         orm_mode = True
         
 class Message(MessageSchema):
@@ -24,7 +24,7 @@ class UserSchema(BaseModel):
 class User(UserSchema):
     id: int
     
-    class Config:
+    class ConfigDict:
         orm_mode = True
         
 # from pydantic import BaseModel

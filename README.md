@@ -25,3 +25,6 @@
 - Better:
 ##
                 docker-compose up --build
+
+##
+                 docker-compose exec web pytest .
