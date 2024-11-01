@@ -17,6 +17,12 @@
 <!-- pip install fastapi[all] —upgrade -->
 <!-- create child model in crud.py fast api -->
 <!-- sudo chmod a+rwx src/tests -->
+<!-- ngrok config add-authtoken 2o0ULr16OKDlr9RnxWPv6cf6Qap_6BpHQMZ3ohVU9mV79kdsE -->
+<!-- ngrok http http://localhost:8000 -->
+<!-- alembic init alembic -->
+<!-- alembic init -t async migration -->
+<!-- https://devsolus.com/2024/02/29/typeerror-with-datetimes-in-sqlmodel/ -->
+
 - Create two models Message(with Fk), User(parent). all in container. use debeaver (conn params from .env). Endpoints are not prepared yet.
 
 ##

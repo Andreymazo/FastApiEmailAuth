@@ -8,8 +8,8 @@ services:
       sh -c "ls -a && uvicorn app.main:app --reload --workers 1 --host 0.0.0.0 --port 8000"    
     env_file:
       .env
-    environment:
-      - DATABASE_URL=postgresql://postgres:123456@db/fast_api_email
+    # environment:
+    #   - DATABASE_URL=postgresql://postgres:123456@db/fast_api_email
     tty: true
     ports:
       - 8000:8000

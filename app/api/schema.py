@@ -6,7 +6,7 @@ class MessageSchema(BaseModel):
     title: str
     description: str
     user_id: int
-    time_created: datetime
+    created_date: datetime
     time_updated: datetime
 
     class ConfigDict:
@@ -16,10 +16,11 @@ class Message(MessageSchema):
     id: int
 
 class UserSchema(BaseModel):
+    parent_message_id:int
+    name:str
     email:EmailStr
-    age:int
-    time_created: datetime
-    time_updated: datetime
+    created_date: datetime
+    
 
 class User(UserSchema):
     id: int
@@ -27,7 +28,7 @@ class User(UserSchema):
     class ConfigDict:
         orm_mode = True
         
-# from pydantic import BaseModel
+
 
 # class NoteSchema(BaseModel):
 #     title: str
