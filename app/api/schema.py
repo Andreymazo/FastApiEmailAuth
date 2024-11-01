@@ -5,9 +5,9 @@ from datetime import datetime
 class MessageSchema(BaseModel):
     title: str
     description: str
-    user_id: int
     created_date: datetime
     time_updated: datetime
+    user_id: int
 
     class ConfigDict:
         orm_mode = True

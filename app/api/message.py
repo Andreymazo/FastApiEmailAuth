@@ -12,6 +12,7 @@ async def create_message(payload: MessageSchema):
         "title": payload.title,
         "description": payload.description,
         "created_date": payload.created_date,
-        "time_updated": payload.time_updated
+        "time_updated": payload.time_updated,
+        "user_id": payload.user_id
     }
     return response_object

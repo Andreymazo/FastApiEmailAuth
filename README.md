@@ -23,7 +23,15 @@
 <!-- alembic init -t async migration -->
 <!-- https://devsolus.com/2024/02/29/typeerror-with-datetimes-in-sqlmodel/ -->
 
-- Create two models Message(with Fk), User(parent). all in container. use debeaver (conn params from .env). Endpoints are not prepared yet.
+<!-- {
+  "title": "string",
+  "description": "string",
+  "user_id": 0,
+  "created_date": "2023-03-31 00:00:00",
+  "time_updated": "2023-03-31 00:00:00"
+} -->
+
+- Create User table for creating message.
 
 ##
         docker-compose up
