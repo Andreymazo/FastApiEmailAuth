@@ -11,6 +11,7 @@ async def create_user(payload: UserSchema):
         "id": user_id,
         "email": payload.email,
         "name": payload.name,
+        "hashed_password":payload.hashed_password,
         "created_date":payload.created_date
     }
     return response_object

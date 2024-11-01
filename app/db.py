@@ -9,15 +9,20 @@ from sqlalchemy import (
     Integer,
     MetaData,
     String,
+    Boolean,
     Table,
     create_engine
 )
 from sqlalchemy.sql import func
+from sqlalchemy.orm import sessionmaker
 
-DATABASE_URL = os.getenv("DATABASE_URL")
-
+#for localhost
+DATABASE_URL = 'postgresql://postgres:123456@localhost/fast_api_email'
+#for docker
+# DATABASE_URL = os.getenv("DATABASE_URL")
 # SQLAlchemy
 engine = create_engine(DATABASE_URL)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 metadata = MetaData()
 message = Table(
     "message",
@@ -51,6 +56,8 @@ user = Table(
     Column("parent_message_id", Integer, nullable=True),
     Column("name", String(255)),
     Column("email", String(50), unique=True),
+    Column("hashed_password", String),
+    Column("is_active", Boolean, default=True),
     Column("created_date", DateTime, server_default=func.now(), nullable=False),#instead of func.now can be datetime.datetime.now or func.sysdate()
 
     ForeignKeyConstraint(

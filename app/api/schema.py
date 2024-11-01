@@ -1,6 +1,6 @@
 # build a schema using pydantic
 from typing import Optional
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, EmailStr
 from datetime import datetime
 
 class MessageSchema(BaseModel):
@@ -21,14 +21,23 @@ class UserSchema(BaseModel):
     name:str
     email:EmailStr
     created_date: datetime
-    
+    hashed_password: str
+
+# class UserCreate(UserSchema):
+#     password: str
 
 class User(UserSchema):
     id: int
     
     class ConfigDict:
         orm_mode = True
-        
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+
+class TokenData(BaseModel):
+    username: str | None = None
 
 
 # class NoteSchema(BaseModel):
