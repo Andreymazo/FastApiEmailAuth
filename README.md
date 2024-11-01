@@ -43,3 +43,6 @@
 ##
                  docker-compose exec web pytest .
 
+[Screencast from 01.11.2024 15:14:53.webm](https://github.com/user-attachments/assets/e1ac15e8-597f-4cbd-8d3d-ddba2ef0d13b)
+
+
