@@ -1,5 +1,6 @@
 # build a schema using pydantic
-from pydantic import BaseModel, EmailStr
+from typing import Optional
+from pydantic import BaseModel, EmailStr, Field
 from datetime import datetime
 
 class MessageSchema(BaseModel):
@@ -16,7 +17,7 @@ class Message(MessageSchema):
     id: int
 
 class UserSchema(BaseModel):
-    parent_message_id:int
+    parent_message_id: Optional[int]=None
     name:str
     email:EmailStr
     created_date: datetime

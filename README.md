@@ -31,7 +31,7 @@
   "time_updated": "2023-03-31 00:00:00"
 } -->
 
-- Create User table for creating message.
+- without migrations. db.py - one big migrtion
 
 ##
         docker-compose up

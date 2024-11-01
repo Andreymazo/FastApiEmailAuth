@@ -6,7 +6,7 @@ router = APIRouter()
 
 @router.post("/", response_model=Message, status_code=201)
 async def create_message(payload: MessageSchema):
-    message_id = await crud.post(payload)
+    message_id = await crud.post_message(payload)
     response_object = {
         "id": message_id,
         "title": payload.title,

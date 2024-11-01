@@ -48,7 +48,7 @@ user = Table(
     "user",
     metadata,
     Column("user_id", Integer, primary_key=True),
-    Column("parent_message_id", Integer),
+    Column("parent_message_id", Integer, nullable=True),
     Column("name", String(255)),
     Column("email", String(50), unique=True),
     Column("created_date", DateTime, server_default=func.now(), nullable=False),#instead of func.now can be datetime.datetime.now or func.sysdate()

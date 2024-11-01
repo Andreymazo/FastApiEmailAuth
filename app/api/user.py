@@ -6,10 +6,11 @@ router = APIRouter()
 
 @router.post("/", response_model=User, status_code=201)
 async def create_user(payload: UserSchema):
-    user_id = await crud.post(payload)
+    user_id = await crud.post_user(payload)
     response_object = {
         "id": user_id,
         "email": payload.email,
-        "age": payload.age,
+        "name": payload.name,
+        "created_date":payload.created_date
     }
     return response_object
